@@ -99,4 +99,4 @@ still works.
 - Built and tested on macOS (CoreMIDI). Windows needs a virtual-MIDI
   driver (loopMIDI) instead of `virtual=True` ports — untested.
 
-MIT-style spirit; scratches my itch, PRs welcome, no SLA.
+MIT licensed (see LICENSE); scratches my itch, PRs welcome, no SLA.
