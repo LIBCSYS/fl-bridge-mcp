@@ -1,3 +1,14 @@
 venv/
 __pycache__/
 .DS_Store
+
+# added 2026-10-07 by M5 before off-site push (stack junk + key/cert files)
+*.p8
+*.p12
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+.venv/
+*.pyc
