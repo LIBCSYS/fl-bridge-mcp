@@ -8,7 +8,9 @@
       <stop offset="0%" stop-color="#FF7A00" />
       <stop offset="100%" stop-color="#FF3D00" />
     </linearGradient>
-    <linearGradient id="bridgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- userSpaceOnUse: a horizontal line has a zero-height bounding box, and an
+         objectBoundingBox gradient on it is not painted at all (SVG spec) -->
+    <linearGradient id="bridgeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="180" y2="0">
       <stop offset="0%" stop-color="#E5A88B" />
       <stop offset="100%" stop-color="#FF7A00" />
     </linearGradient>
