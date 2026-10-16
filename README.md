@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo.svg" alt="fl-bridge-mcp" width="500"></p>
+
 # fl-bridge-mcp
 
 An **unofficial** MCP (Model Context Protocol) bridge for FL Studio.
@@ -6,8 +8,13 @@ of Image-Line Software.
 
 Talk to FL Studio from Claude (or any MCP client): transport, tempo,
 pattern jumps, step-sequencer programming, mixer moves, live notes,
-chord progressions — and, unlike a fire-and-forget MIDI blaster, it can
-**read FL's state back** over a return port.
+chord progressions — and, unlike a fire-and-forget MIDI blaster, it is
+built to **read FL's state back** over a return port.
+
+**Status (v0.2.0):** the command path — tempo, transport, notes — is
+verified live by ear on FL Studio 2026 / macOS. The return port connects
+(FL handshakes on it), but status reports have not yet been confirmed end
+to end, so treat `get_status` and `list_channels` as beta. Reports welcome.
 
 ## How it works
 

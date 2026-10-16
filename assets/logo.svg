@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="100%" height="200">
+  <defs>
+    <linearGradient id="claudeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D2BD" />
+      <stop offset="100%" stop-color="#E5A88B" />
+    </linearGradient>
+    <linearGradient id="flGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00" />
+      <stop offset="100%" stop-color="#FF3D00" />
+    </linearGradient>
+    <linearGradient id="bridgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5A88B" />
+      <stop offset="100%" stop-color="#FF7A00" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="500" height="200" fill="transparent" rx="16"/>
+
+  <!-- left: the assistant spark -->
+  <g transform="translate(100, 100)">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="url(#claudeGrad)" stroke-width="4" opacity="0.3"/>
+    <path d="M 0 -25 Q 0 0 25 0 Q 0 0 0 25 Q 0 0 -25 0 Q 0 0 0 -25 Z" fill="url(#claudeGrad)" filter="url(#glow)"/>
+  </g>
+
+  <!-- the MCP bridge, packets in flight -->
+  <g transform="translate(160, 100)">
+    <path d="M 0 0 L 180 0" stroke="url(#bridgeGrad)" stroke-width="4" stroke-dasharray="8 8"/>
+    <circle cx="45" cy="0" r="4" fill="#F2D2BD" />
+    <circle cx="135" cy="0" r="4" fill="#FF7A00" />
+  </g>
+
+  <!-- right: the DAW, as sequencer bars -->
+  <g transform="translate(400, 100)">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="url(#flGrad)" stroke-width="4" opacity="0.3"/>
+    <rect x="-15" y="-20" width="8" height="40" rx="4" fill="url(#flGrad)" filter="url(#glow)"/>
+    <rect x="-2" y="-10" width="8" height="20" rx="4" fill="url(#flGrad)" filter="url(#glow)"/>
+    <rect x="11" y="-30" width="8" height="60" rx="4" fill="url(#flGrad)" filter="url(#glow)"/>
+  </g>
+
+  <!-- product name only: both vendors' marks stay out of the lockup -->
+  <text x="250" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#888888" text-anchor="middle" letter-spacing="2">FL-BRIDGE MCP</text>
+</svg>
